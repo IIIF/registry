@@ -1,0 +1,18 @@
+{
+    "id": "http://www.getty.edu/",
+    "institution": "Getty",
+    "streams": [
+        {
+            "id": "http://www.getty.edu/museum.json",
+            "label": "Museum collections" 
+        },
+        {
+            "id": "http://www.getty.edu/library.json",
+            "label": "Library collections" 
+        },
+        {
+            "id": "http://www.getty.edu/research.json",
+            "label": "Research Center" 
+        }
+    ]
+}

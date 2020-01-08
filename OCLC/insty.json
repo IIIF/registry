@@ -1,0 +1,14 @@
+{
+    "id": "http://institutiony.ac.yy",
+    "institution": "University Library of Y",
+    "provider": {
+        "id": "https://www.oclc.org/en/home.html",
+        "label": "OCLC"
+    },
+    "streams": [
+        {
+            "id": "http://institutiony.ac.yy/activity_stream.json",
+            "label": "Top level collection" 
+        }
+    ]
+}
