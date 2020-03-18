@@ -15,19 +15,30 @@ To register a link to your streams we use the following JSON structure:
 ```
 {
     "id": "http://www.getty.edu/",
-    "institution": "Getty",
+    "institution": {
+        "id": "http://www.getty.edu/",
+        "label": {
+            "en": [ "Getty" ]
+        }    
+    },
     "streams": [
         {
             "id": "http://www.getty.edu/museum.json",
-            "label": "Museum collections" 
+            "label": {
+                "en": [ "Museum collections" ]
+            }
         },
         {
             "id": "http://www.getty.edu/library.json",
-            "label": "Library collections" 
+            "label": {
+                "en": [ "Library collections" ]
+            }    
         },
         {
             "id": "http://www.getty.edu/research.json",
-            "label": "Research Center" 
+            "label": {
+                "en": [ "Research Center" ]
+            }    
         }
     ]
 }
@@ -49,7 +60,9 @@ For Aggregators or institutions that collect content from other providers and ag
 ```
 "provider": {
     "id": "https://www.oclc.org/en/home.html",
-    "label": "OCLC"
+    "label": {
+        "en": [ "OCLC" ]
+    }    
 },
 ```
 
