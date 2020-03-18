@@ -1,5 +1,5 @@
 # IIIF Registry
-This is the basis of the IIIF Registry of Activity streams. This project aims to give access to a large amount of IIIF resources and provide a way to keep up to date with changes. The Activity Streams format is defined in the [Discovery Specification](https://iiif.io/api/discovery/0.4/).
+This is the basis of the IIIF Registry of Activity streams. This project aims to give access to a large amount of IIIF resources and provide a way to keep up to date with changes. The Activity Streams format is defined in the [Change Discovery Specification](https://iiif.io/api/discovery/0.4/).
 
 We welcome additions to the registry and additions can be made using the following process:
 
@@ -10,7 +10,7 @@ We welcome additions to the registry and additions can be made using the followi
 
 ## Registry JSON format  
 
-To registry a link to your streams we use the following JSON structure: 
+To register a link to your streams we use the following JSON structure: 
 
 ```
 {
@@ -40,9 +40,11 @@ Where:
     * `id` Activity Stream URL. Must be resolvable 
     * `label` a description that can be shown to the user so they can tell which stream to monitor for updates. 
 
+The JSON file should be named appropriately so people know what it represents and must have an extension of `.json`.
+
 ## Aggregators
 
-For Aggregators or institutions that collect content from other providers and aggregate their content. A slightly different structure can be used. Examples of Aggregators would be Europeana or OCLC with ContentDM. Both hold multiple institution's data. In this case the aggregator would have one registry JSON file per institutional client. The Provider can then add the following to the root of the JSON to show who provided the content:
+For Aggregators or institutions that collect content from other providers and aggregate their content. A slightly different structure can be used. Examples of Aggregators would be Europeana or OCLC with ContentDM. Both hold multiple institutions' data. In this case the Aggregator would have one registry JSON file per institutional client. The Provider can then add the following to the root of the JSON to show who provided the content:
 
 ```
 "provider": {
