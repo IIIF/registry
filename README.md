@@ -52,3 +52,5 @@ For Aggregators or institutions that collect content from other providers and ag
     "label": "OCLC"
 },
 ```
+
+You can see examples of this in the [OCLC directory](https://github.com/IIIF/registry/tree/deploy/OCLC) where [instx.json](https://github.com/IIIF/registry/blob/deploy/OCLC/instx.json) would be the set of changes from one ContentDM instance and [insty.json](https://github.com/IIIF/registry/blob/deploy/OCLC/insty.json) is a second institution. 
