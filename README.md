@@ -46,7 +46,7 @@ To register a link to your streams we use the following JSON structure:
 
 Where:
  * `id` is a URI for your institution. This could be an institution website, Wikidata URI or other resolvable link. 
- * `institution` the name of the institution that could be shown to a user
+ * `institution` the name of the institution that could be shown to a user. This is an optional field but encouraged. 
  * `streams` list of activity streams for this institution
     * `id` Activity Stream URL. Must be resolvable 
     * `label` a description that can be shown to the user so they can tell which stream to monitor for updates. 
