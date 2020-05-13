@@ -1,14 +1,14 @@
 {
     "id": "http://institutionx.ac.xx",
-    "institution": "National Library of X",
+    "institution": { "en": [ "National Library of X" ]},
     "provider": {
         "id": "https://www.oclc.org/en/home.html",
-        "label": "OCLC"
+        "label": { "en": [ "OCLC" ]}
     },
     "streams": [
         {
             "id": "http://institutionx.ac.xx/activity_stream.json",
-            "label": "Top level collection" 
+            "label": { "en": [ "Top level collection" ] }
         }
     ]
 }

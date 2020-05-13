@@ -1,0 +1,14 @@
+{
+    "id": "https://www.bodleian.ox.ac.uk/",
+    "institution": { "en" : ["Bodleian Libraries, University of Oxford"] },
+    "provider": {
+        "id": "https://digital.bodleian.ox.ac.uk",
+        "label": { "en": ["Digital Bodleian: Bodleian Libraries and Oxford College Libraries"] }
+    },
+    "streams": [
+        {
+            "id": "https://iiif.bodleian.ox.ac.uk/iiif/activity/all-changes",
+            "label": {"en": ["All changes"]} 
+        }
+    ]
+}
