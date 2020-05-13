@@ -1,18 +1,18 @@
 {
     "id": "http://www.getty.edu/",
-    "institution": "Getty",
+    "institution": { "en": [ "Getty"]},
     "streams": [
         {
             "id": "http://www.getty.edu/museum.json",
-            "label": "Museum collections" 
+            "label": { "en": [ "Museum collections" ]}
         },
         {
             "id": "http://www.getty.edu/library.json",
-            "label": "Library collections" 
+            "label": { "en": [ "Library collections" ]}
         },
         {
             "id": "http://www.getty.edu/research.json",
-            "label": "Research Center" 
+            "label": { "en": [ "Research Center" ]}
         }
     ]
 }
