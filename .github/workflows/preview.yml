@@ -42,7 +42,8 @@ jobs:
       env:
         CONFIG: "--config _config.yml"
         BASE_URL: "/registry/${{ env.BRANCH_NAME}}"
-    # Validate
+
+    # Create streams
     - name: Set up Python 3.x
       uses: actions/setup-python@v2
       with:
@@ -50,21 +51,6 @@ jobs:
         python-version: '3.x' 
         # Optional - x64 or x86 architecture, defaults to x64
         architecture: 'x64' 
-   # - name: Cache pip
-   #   uses: actions/cache@v2
-   #   with:
-   #     # This path is specific to Ubuntu
-   #     path: ~/.cache/pip
-   #     # Look to see if there is a cache hit for the corresponding requirements file
-   #     key: ${{ runner.os }}-pip-${{ hashFiles('requirements.txt') }}
-   #     restore-keys: |
-   #       ${{ runner.os }}-pip-
-   #       ${{ runner.os }}-
-
-   # - name: Install dependencies
-   #   run: |
-   #     python -m pip install --upgrade pip
-   #     pip install -r scripts/requirements.txt
 
     - name: Create streams
       run: src/createAS.py
