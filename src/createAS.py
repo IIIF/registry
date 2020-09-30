@@ -8,7 +8,7 @@ from os.path import isfile, join, isdir, exists
 import os
 import re
 
-ignore_list = ['[.]+.*', 'src']
+ignore_list = ['[.]+.*', 'src', '_site']
 
 def processDir(path):
     files = []
@@ -128,7 +128,7 @@ while endIndex < len(asStreams) or firstRun==True:
         endIndex = len(asStreams)
 
 pageCount = 1
-outputDir = 'output'
+outputDir = '_site'
 if not exists(outputDir):
     os.mkdir(outputDir)
 
@@ -136,5 +136,26 @@ for page in pageJson:
     print ('Page: {}'.format(pageCount))
     print (json.dumps(page, indent=4))
     filename = page['id'].split('/')[-1]
-    with open('output/{}'.format(filename), 'w') as outfile:
+    with open('{}/{}'.format(outputDir, filename), 'w') as outfile:
         json.dump(page, outfile, indent=4)
+    pageCount += 1    
+
+# Now create index.json
+
+index = {
+    "@context": "http://iiif.io/api/discovery/1/context.json",
+    "id": "https://registry.iiif.io/index.json",
+    "type": "OrderedCollection",
+    "summary": "The IIIF registry of Activity Streams",
+    "first": {
+        "id": "https://registry.iiif.io/page-0.json",
+        "type": "OrderedCollectionPage"
+    },
+    "last": {
+        "id": "https://registry.iiif.io/page-{}.json".format(pageCount - 2),
+        "type": "OrderedCollectionPage"
+    }
+}
+
+with open('{}/index.json'.format(outputDir), 'w') as outfile:
+    json.dump(index, outfile, indent=4)
