@@ -64,7 +64,7 @@ jobs:
     - name: Deploy to S3
       uses: glenrobson/s3-sync-action@v0.5.1
       with:
-        args: --acl public-read 
+        args: --acl public-read --cache-control max-age=0,public
       env:
         AWS_S3_BUCKET: "iiif-registry"
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
