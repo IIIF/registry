@@ -152,7 +152,7 @@ index = {
         "type": "OrderedCollectionPage"
     },
     "last": {
-        "id": "https://registry.iiif.io/page-{}.json".format(pageCount - 1),
+        "id": "https://registry.iiif.io/page-{}.json".format(pageCount - 2),
         "type": "OrderedCollectionPage"
     }
 }
