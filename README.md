@@ -1,7 +1,7 @@
 # IIIF Registry
 This is the basis of the IIIF Registry of Activity streams. This project aims to give access to a large amount of IIIF resources and provide a way to keep up to date with changes. The Activity Streams format is defined in the [Change Discovery Specification](https://iiif.io/api/discovery/0.4/).
 
-We welcome additions to the registry and additions can be made using the following process:
+We welcome additions to the registry and they can be made using the following process:
 
   1. Create branch for your addition
   2. Create a directory for your institution. This should be a short name without spaces or punctuation
@@ -67,3 +67,14 @@ For Aggregators or institutions that collect content from other providers and ag
 ```
 
 You can see examples of this in the [OCLC directory](https://github.com/IIIF/registry/tree/deploy/OCLC) where [instx.json](https://github.com/IIIF/registry/blob/deploy/OCLC/instx.json) would be the set of changes from one ContentDM instance and [insty.json](https://github.com/IIIF/registry/blob/deploy/OCLC/insty.json) is a second institution. 
+
+## Jekyll
+
+As well as the JSON to support the registry there is also a simple Jekyll site. This can be installed and run by:
+
+```
+# Only required the first run:
+gem install jekyll bundler
+
+# run this to see the jekyll site on http://0.0.0.0:4000
+bundle exec jekyll serve
